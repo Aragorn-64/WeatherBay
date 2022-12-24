@@ -1,0 +1,34 @@
+body{
+    background: rgb(108, 246, 244);
+}
+
+.row, .col{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.col{
+    flex-direction: column;
+}
+
+#content{
+    margin-top: 2%;
+}
+
+button#mapPin{
+    border: solid red 1px;
+    border-radius: 5%;
+}
+
+.w100{
+    width: 100%;
+}
+
+#map{
+    background: rgb(115, 212, 231);
+}

@@ -1,30 +1,32 @@
-const infoDiv = document.querySelector('div.info')
-infoDiv.innerHTML = ""
+const form = document.querySelector("form");
+const search = document.querySelector("#searchBar");
+const submit = document.querySelector("#submitBtn");
+const weather = document.querySelector("#weatherInfo");
+const apikey = '6e4bd731a82096eaff601f325f1922f9';
 
-navigator.geolocation.getCurrentPosition((position, error) => {
-    if(error) console.log(error)
-    else printLocation(position);
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    weather.innerHTML = "Loading ...";
+    let city = search.value;
+    getWeather(city);
 })
 
-function printLocation(pos){
-    let coords = [pos.coords.latitude, pos.coords.longitude]
-    console.log(coords);
-    let lati = pos.coords.latitude
-    let longi = pos.coords.longitude
-    let key = 'OuKDpx/uUaGsY1GFPumywA==9BRitieP73ifMqlM';
-    let URL = `https://api-ninjas.com/api/weather?lat=${lati}&lon=${longi}`;
-    let method = {
-        mode: 'cors',
-        method : 'GET',
-        headers: {
-          'Access-Control-Allow-Origin':'*',
-            'X-Api-Key': key
-        }
-    }
-    fetch(URL, method)
-    .then(res => {
-        console.log(res)
-    })
-    .catch(error => console.log(error))
-    
-}
+const getWeather = async (city) => {
+    let URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+    let resp = await fetch(URL);
+    let data = await resp.json();
+    console.log(data);
+    return printData(data);
+};
+
+const printData = (data) => {
+    weather.innerHTML = 
+    `<h3>${data.name}</h3> <br>
+    ${data.weather.main} : ${data.weather.description} <br>
+    Temp: ${data.main.temp} (${data.main.temp_min} to ${data.main.temp_max}) <br> 
+    Feels like: ${data.main.feels_like} <br>
+    Humidity: ${data.main.humidity} <br>`;
+    return;
+};
+
+                

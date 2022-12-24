@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
     <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-    <div class="info">
-        
+    <div class="col w100" id="content">
+        <div class="row w100" id="searchHeader">
+            <div class="col col-auto">
+                <button id="mapPin">pin</button> My Location
+            </div>
+            <div class="col col-10 col-gap-1">
+                <form>
+                    <input type="text" id="searchBar">
+                    <input type="submit" id="submitBtn">
+                </form>
+            </div>
+        </div>
+        <div class="row w100 75vh">
+            <div class="col col-5 col-sm-10" id="map">
+                <!-- <iframe
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/place/Nashik,"
+                </iframe> -->
+            </div>
+            <div class="col col-5 col-sm-10" id="weatherInfo">
+                
+            </div>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
+<!-- src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDYot47uSd9zOQM_AImA0p0sLWYBUGtMvU
+    &q=Nashik"> -->
