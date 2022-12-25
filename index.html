@@ -11,17 +11,23 @@
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
+    
     <div class="col w-100 center" id="content">
-        <div class="alert"></div>
+        <p class="fs-1 title">Weather Bay</p>
+        <div class="alert">Please enable location permission</div>
         <div class="row w-100 center" id="searchHeader">
-            <div class="col col-2 center">
-                <button id="mapPin"><img src="./pin.png" alt="#" width="20"></button> Current Location
+            <div class="col offset-1 col-auto center">
+                Show the weather for your current location
+                <button id="mapPin"><img src="./pin.png" alt="#" width="20"></button> 
             </div>
-            <div class="col col-8 col-gap-1 center">
-                <form>
-                    <input type="text" id="searchBar">
-                    <input type="submit" id="submitBtn">
-                </form>
+            <div class="col  col-8 col-gap-1 center">
+                <div class="row">Type a name of a city to show weather stats</div>
+                <div class="row">
+                    <form>
+                        <input type="text" id="searchBar">
+                        <input type="submit" id="submitBtn">
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row w-100 75vh">

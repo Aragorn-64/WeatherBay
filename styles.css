@@ -1,5 +1,5 @@
 body{
-    background: rgb(201, 245, 245);
+    background-color: rgb(46, 172, 172);
 }
 
 .row, .col{
@@ -20,9 +20,9 @@ body{
     flex-direction: column;
 }
 
-#content{
+/* #content{
     margin-top: 2%;
-}
+} */
 
 button#mapPin{
     border: solid red 1px;
@@ -47,3 +47,15 @@ button#mapPin{
     padding: 1%;
     margin: 1%;
 }
+
+.alert{
+    display: none;
+}
+
+.title{
+    color: rgb(0, 132, 255);
+}
+
+/* *{
+    border: solid 1px red;
+} */
