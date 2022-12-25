@@ -52,6 +52,10 @@ button#mapPin{
     display: none;
 }
 
+.not-found-alert{
+    display: none;
+}
+
 .title{
     color: rgb(0, 132, 255);
 }
