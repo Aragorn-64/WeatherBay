@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(46, 172, 172);
+    background-color: rgb(189, 255, 255);
 }
 
 .row, .col{
@@ -8,7 +8,7 @@ body{
 }
 
 .center{
-     align-items: center;
+    align-items: center;
     justify-items: center;
 }
 
@@ -48,7 +48,7 @@ button#mapPin{
     margin: 1%;
 }
 
-.alert{
+.permalert{
     display: none;
 }
 

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const weather = document.querySelector("#weatherInfo");
     const apikey = '6e4bd731a82096eaff601f325f1922f9';
     const mapButton = document.querySelector('#mapPin');
-    const alertTag = document.querySelector('.alert')
+    const alertTag = document.querySelector('.permalert')
 
 
     mapButton.addEventListener('click', () => {
@@ -19,13 +19,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const locationError = () => {
         // console.log(error);
-        alertTag.style.display = 'block';
+        alertTag.style.display = 'flex';
     }
 
     form.addEventListener('submit', (event)=>{
         event.preventDefault();
         // weather.innerHTML = "Loading ...";
         let city = search.value;
+        search.value = '';
         getWeatherCity(city);
     })
 
