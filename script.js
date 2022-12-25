@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let disc = '';
         if(data.weather.main) disc= '<div class="card-subtitle text-muted">${data.weather.main} : ${data.weather.description}</div>';  
         let colour = getTempColour(data.main.temp);
-        weather.innerHTML += 
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML=
         `
         <div class="card" style="background: ${colour};">
             <div class="card-body">
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             </div>
         </div>
         `
-        
+        weather.prepend(newDiv);
         return;
     };
 
