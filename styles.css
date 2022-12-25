@@ -1,10 +1,14 @@
 body{
-    background: rgb(108, 246, 244);
+    background: rgb(228, 241, 241);
 }
 
 .row, .col{
     display: flex;
-    align-items: center;
+   
+}
+
+.center{
+     align-items: center;
     justify-items: center;
 }
 
@@ -25,10 +29,21 @@ button#mapPin{
     border-radius: 5%;
 }
 
-.w100{
+.w-100{
     width: 100%;
 }
 
 #map{
     background: rgb(115, 212, 231);
+}
+
+.weatherBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 1%;
+    margin: 1%;
 }

@@ -11,20 +11,21 @@
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-    <div class="col w100" id="content">
-        <div class="row w100" id="searchHeader">
-            <div class="col col-auto">
-                <button id="mapPin">pin</button> My Location
+    <div class="col w-100 center" id="content">
+        <div class="alert"></div>
+        <div class="row w-100 center" id="searchHeader">
+            <div class="col col-2 center">
+                <button id="mapPin"><img src="./pin.png" alt="#" width="20"></button> Current Location
             </div>
-            <div class="col col-10 col-gap-1">
+            <div class="col col-8 col-gap-1 center">
                 <form>
                     <input type="text" id="searchBar">
                     <input type="submit" id="submitBtn">
                 </form>
             </div>
         </div>
-        <div class="row w100 75vh">
-            <div class="col col-5 col-sm-10" id="map">
+        <div class="row w-100 75vh">
+            <!-- <div class="col col-5 col-sm-10" id="map">
                 <!-- <iframe
                     width="600"
                     height="450"
@@ -33,10 +34,12 @@
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/place/Nashik,"
-                </iframe> -->
-            </div>
-            <div class="col col-5 col-sm-10" id="weatherInfo">
-                
+                </iframe> 
+            </div> -->
+            <div class="col col-5 col-sm-10 w-100">
+                <div class="weatherBox" id="weatherInfo">
+
+                </div>
             </div>
         </div>
     </div>
