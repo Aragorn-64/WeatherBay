@@ -45,9 +45,10 @@ const getWeatherCity = async (city) => {
 const printData = (data) => {
     let disc = '';
     if(data.weather.main) disc= '<div class="card-subtitle text-muted">${data.weather.main} : ${data.weather.description}</div>';  
+    let colour = getTempColour(data.main.temp);
     weather.innerHTML += 
     `
-    <div class="card">
+    <div class="card" style="background: ${colour};">
         <div class="card-body">
             <div class="card-title">${data.name}</div>
             ${disc}
@@ -62,6 +63,22 @@ const printData = (data) => {
     
     return;
 };
+
+const getTempColour = (temp) => {
+    if(temp > 35){
+        return '#ff8c00';
+    }
+    else if(temp > 24){
+        return '#ffd417';
+    }
+    else if(temp > 10){
+        return '#14ccff';
+    }
+    else{
+        return '#0066ff';
+    }
+}
+
 
 // <h3>${data.name}</h3> <br>
 //     ${data.weather.main} : ${data.weather.description} <br>
