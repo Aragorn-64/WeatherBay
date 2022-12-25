@@ -23,7 +23,7 @@ form.addEventListener('submit', (event)=>{
     event.preventDefault();
     // weather.innerHTML = "Loading ...";
     let city = search.value;
-    getWeather(city);
+    getWeatherCity(city);
 })
 
 const getWeatherCoords = async (coord) => {
